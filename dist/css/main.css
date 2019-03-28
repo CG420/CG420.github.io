@@ -6,7 +6,7 @@
 
 .avatar {
     border-radius: 50%; 
-    float: left; 
+    float: right; 
     margin-right: 1em;
     height:350px; width: 350px;
   }
