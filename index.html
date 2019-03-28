@@ -7,17 +7,38 @@
        <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
-            <nav>
-                    <ul>
-                      <li><a href="index.html">Home</a></li>
-                      <li><a href="resume.html">Resume</a></li>
-                      <li><a href="contact.html">Contact</a></li>
-                    </ul>
-            </nav>
-            <h1>Hello, I am Chris</h1>
+      <header>
+        <span class="logo">Chris' WebSite</span>
+        <a id="toggleMenu">Menu<a></a>
+        <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="resume.html">Resume</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+      <main>
+        <h1>Hello, I am Chris. 
+      </main>
             <p>Hey there, I love to build things. I can construct anything. Just ask!
                 IF YOU BUILD IT, THEY WILL COME!!!
             </p>
             <img class="avatar" src="http://weightofthought.com/wp-content/uploads/2017/07/Weight-of-Thought.jpg" alt=https://www.gravatar.com/avatar/4678a33bf44c38e54a58745033b4d5c6?d=mm&s=64>
+            <script>
+
+                var toggleMenu = document.getElementById('toggleMenu');
+                var nav = document.querySelector('nav');
+                toggleMenu.addEventListener(
+                  'click',
+                  function(){
+                    if(nav.style.display=='block'){
+                      nav.style.display='none';
+                    }else{
+                      nav.style.display='block';
+                    }
+                  }
+                );
+              </script>   
     </body>
 </html>
