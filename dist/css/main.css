@@ -81,3 +81,47 @@ main {
     border-bottom: 1px solid #777; } }
 
 /*# sourceMappingURL=main.css.map */
+
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  background: blue;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.col {
+  width: 33%;
+  float: left;
+  border: 1px solid #990000;
+  height: 100px;
+  background: #fff;
+  text-align: center;
+  line-height: 100px;
+}
+
+
+.next {
+  clear:both; 
+  padding-top: 2rem; 
+  text-align: center; 
+  font-weight: bold;
+}
+
+.next a,
+.next:link,
+.next:visited {
+  text-decoration: none;
+  display: inline-block;
+  padding: 1rem;
+  border: 1px solid #777;
+  color: #777;
+}
