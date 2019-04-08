@@ -56,3 +56,40 @@ gulp.task('build-resume', function(){
   . pipe(gulp.dest('dist/css'));
 });
 
+gulp.task('build-contact', function(){
+  //Create an unminified version
+  var full = gulp.src([
+    'src/scss/contact.scss'
+  ])
+  . pipe(scss())
+  . pipe(concat('contact.css'))
+  . pipe(gulp.dest('dist/css'));
+
+  //Create a minified version
+  var min = gulp.src([
+    'src/scss/contact.scss'
+  ])
+  . pipe(scss())
+  . pipe(cleanCSS())
+  . pipe(concat('contact.min.css'))
+  . pipe(gulp.dest('dist/css'));
+});
+
+gulp.task('build-thanks', function(){
+  //Create an unminified version
+  var full = gulp.src([
+    'src/scss/thanks.scss'
+  ])
+  . pipe(scss())
+  . pipe(concat('thanks.css'))
+  . pipe(gulp.dest('dist/css'));
+
+  //Create a minified version
+  var min = gulp.src([
+    'src/scss/thanks.scss'
+  ])
+  . pipe(scss())
+  . pipe(cleanCSS())
+  . pipe(concat('thanks.min.css'))
+  . pipe(gulp.dest('dist/css'));
+});
