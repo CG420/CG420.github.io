@@ -31,5 +31,28 @@ gulp.task('build-css', function(){
 });
 
 gulp.task('watch', function(){
-  gulp.watch('./public/src/scss/**/*.scss', ['build-css']);
+  gulp.watch('.//src/scss/**/*.scss', ['build-css']);
+  gulp.watch('.//src/scss/**/*.scss', ['build-resume']);
+  gulp.watch('.//src/scss/**/*.scss', ['build-contact']);
+  gulp.watch('.//src/scss/**/*.scss', ['build-thanks']);
 });
+
+gulp.task('build-resume', function(){
+  //Create an unminified version
+  var full = gulp.src([
+    'src/scss/resume.scss'
+  ])
+  . pipe(scss())
+  . pipe(concat('resume.css'))
+  . pipe(gulp.dest('dist/css'));
+
+  //Create a minified version
+  var min = gulp.src([
+    'src/scss/resume.scss'
+  ])
+  . pipe(scss())
+  . pipe(cleanCSS())
+  . pipe(concat('resume.min.css'))
+  . pipe(gulp.dest('dist/css'));
+});
+
